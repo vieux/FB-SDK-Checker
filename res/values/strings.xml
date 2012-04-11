@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="warning">At %s you used an app exposing your facebook access token.</string>
+    <string name="app_name">FB SDK Checker</string>
+    <string name="title">Facebook SDK Security Hole detected</string>
+
+</resources>

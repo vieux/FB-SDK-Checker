@@ -1,0 +1,17 @@
+  ______ ____     _____ _____  _  __   _____ _               _             
+ |  ____|  _ \   / ____|  __ \| |/ /  / ____| |             | |            
+ | |__  | |_) | | (___ | |  | | ' /  | |    | |__   ___  ___| | _____ _ __ 
+ |  __| |  _ <   \___ \| |  | |  <   | |    | '_ \ / _ \/ __| |/ / _ \ '__|
+ | |    | |_) |  ____) | |__| | . \  | |____| | | |  __/ (__|   <  __/ |   
+ |_|    |____/  |_____/|_____/|_|\_\  \_____|_| |_|\___|\___|_|\_\___|_|   
+                                                                           
+On 10 Apr 2012 a blog post from Parse (http://blog.parse.com/2012/04/10/discovering-a-major-security-hole-in-facebooks-android-sdk/)
+indicates they found a major security issue in the Facebook SDK. they reported the issue in mid-february and the issue is now solved.
+
+But tons of apps didn't update the facebook SDK yet and still have the security hole.
+
+With FB SDK Checker, you can check if any of you app is exposing your access token.
+
+(For exemple, Dra Something is exposing your access token each time you launch the app.)
+
+https://market.android.com/details?id=com.victorvieux.fbsdkchecker
