@@ -12,6 +12,6 @@ But tons of apps didn't update the facebook SDK yet and still have the security 
 
 With FB SDK Checker, you can check if any of you app is exposing your access token.
 
-(For exemple, Dra Something is exposing your access token each time you launch the app.)
+(For exemple, Draw Something is exposing your access token each time you launch the app.)
 
 https://market.android.com/details?id=com.victorvieux.fbsdkchecker

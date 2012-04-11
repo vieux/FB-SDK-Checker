@@ -4,5 +4,6 @@
     <string name="warning">At %s you used an app exposing your facebook access token.</string>
     <string name="app_name">FB SDK Checker</string>
     <string name="title">Facebook SDK Security Hole detected</string>
+    <string name="help">Start the service and use your phone as usual, you\'ll receive a notification as soon as an app exposes your access token</string>
 
 </resources>

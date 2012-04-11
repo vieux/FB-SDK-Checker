@@ -68,4 +68,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher" android:layout_gravity="center" android:layout_marginTop="10dp" android:visibility="gone"/>
 
+    <TextView
+        android:id="@+id/textViewHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help" android:paddingLeft="5dp" android:paddingRight="5dp" android:textColor="@android:color/white"/>
+
 </LinearLayout>

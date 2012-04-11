@@ -23,7 +23,8 @@ public class FBSDKCheckerActivity extends Activity implements OnCheckedChangeLis
         
         ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButtonService);
         toggleButton.setChecked(isServiceRunning());
-        
+        if (toggleButton.isChecked())
+    		findViewById(R.id.textViewHelp).setVisibility(View.GONE);
         toggleButton.setOnCheckedChangeListener(this);
         
         handleIntent(getIntent());
@@ -42,19 +43,24 @@ public class FBSDKCheckerActivity extends Activity implements OnCheckedChangeLis
     		((TextView)findViewById(R.id.textViewLine)).setText(line);
     		((TextView)findViewById(R.id.textViewDate)).setText(getString(R.string.warning,  line.split(" ")[1]));
     		findViewById(R.id.imageViewLogo).setVisibility(View.VISIBLE);
+    		findViewById(R.id.textViewHelp).setVisibility(View.GONE);
     	}
     }
 
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		Intent service = new Intent(this, FBSDKCheckerService.class);
-		if (isChecked)
+		if (isChecked) {
 			startService(service);
+    		findViewById(R.id.textViewHelp).setVisibility(View.GONE);
+		}
 		else {
 			stopService(service);
     		((TextView)findViewById(R.id.textViewLine)).setText("");
     		((TextView)findViewById(R.id.textViewDate)).setText("");
     		findViewById(R.id.imageViewLogo).setVisibility(View.GONE);
+    		findViewById(R.id.textViewHelp).setVisibility(View.VISIBLE);
+
 		}
 	}
 	
