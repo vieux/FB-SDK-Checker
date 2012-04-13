@@ -38,10 +38,11 @@ public class FBSDKCheckerService extends Service{
 						
 			            while ((line = reader.readLine()) != null)
 			            {
-			                    if (line.contains("Login Success!") || line.contains("access_token"))
+			                    if (line.contains("Login Success!"))
 			                    {
 			                    	displayNotification(line);
 			                    }
+			                    line = null;
 			            }
 
 
@@ -58,11 +59,10 @@ public class FBSDKCheckerService extends Service{
 	
 	public void displayNotification(String line) {
 			Notification  notification = new Notification(R.drawable.ic_launcher, getString(R.string.title) ,System.currentTimeMillis());;
-			notification.defaults = Notification.DEFAULT_ALL;
 			notification.flags = Notification.FLAG_AUTO_CANCEL;
 			Intent i = new Intent(this, FBSDKCheckerActivity.class);
 			i.putExtra("line", line);
 			notification.setLatestEventInfo(this, getString(R.string.app_name), getString(R.string.title), PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_ONE_SHOT));
-			((NotificationManager)this.getSystemService(Context.NOTIFICATION_SERVICE)).notify(0x42, notification);
+			((NotificationManager)this.getSystemService(Context.NOTIFICATION_SERVICE)).notify(line.hashCode(), notification);
 	}
 }
